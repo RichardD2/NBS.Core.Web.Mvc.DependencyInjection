@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>11.0</LangVersion>
+		<Copyright>Copyright © Nevalee Business Solutions</Copyright>
+		<Product>NBS.Core.Web</Product>
+		<Version>4.9.0</Version>
+		<Authors>Nevalee Business Solutions</Authors>
+		<NeutralLanguage>en-GB</NeutralLanguage>
+		<Description>Dependency injection for ASP.NET MVC 5 applications using the Microsoft DI abstractions library.</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DefineConstants>TRACE;JETBRAINS_ANNOTATIONS</DefineConstants>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsAsErrors />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="JetBrains.Annotations" Version="2022.3.1" />
+		<PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="System.Web" />
+	</ItemGroup>
+
+</Project>
